@@ -27,7 +27,7 @@ const reducerImages = (state = initialState, action) => {
 
             return {
                 ...state,
-                favorites: state.favorites.filter(img => img.id !== action.img.id),
+                favorites: state.favorites.filter(img => img.id !== action.img.id)
             }
         } else {
 

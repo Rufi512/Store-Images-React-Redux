@@ -4,13 +4,16 @@ const Bar = () =>{
 
 function borderBar(e){
  const line = document.querySelector('#line')
- const box = document.querySelector('.box')
+ const explore = document.querySelector('.explore')
+ const favorites = document.querySelector('.favorites')
  line.style.left = e.offsetLeft + 'px'
  line.style.width = e.offsetWidth + 'px'
- if(e.innerHTML === "Explore"){;
-     box.style.transform = 'translateX(0%)';
+ if(e.innerHTML === "Explore"){
+     explore.style.transform = 'translateX(0%)';
+     favorites.style.transform = 'translateX(100%)'
  }else{
-     box.style.transform = 'translateX(-100%)';
+      explore.style.transform = 'translateX(-100%)';
+     favorites.style.transform = 'translateX(0%)'
  }
 }
 

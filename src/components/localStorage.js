@@ -1,7 +1,7 @@
 export function loadStorageFavorites (){
 	const serializedState = localStorage.getItem('favorites')
 	if(serializedState === null){
-		return{favorites:[]};
+		return {favorites:[]};
 	}else{
 		return JSON.parse(serializedState)
 	}

@@ -22,11 +22,9 @@ function App() {
   	<Provider store={store}>
     <div className="container">
     <Bar/>
-    <div className="box">
       <Cards/>
       <Favorites/>
       </div>
-    </div>
     </Provider>
   );
 

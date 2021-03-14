@@ -20,11 +20,13 @@ function App() {
 
   return (
   	<Provider store={store}>
-    <div className="container">
+
     <Bar/>
+      <div className="container-sections">
       <Cards/>
       <Favorites/>
       </div>
+     
     </Provider>
   );
 

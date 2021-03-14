@@ -1,8 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
+
 const Cards = ({imgs,favs,likes,addFavorite,addLike}) =>(
-      <div className="explore">
+      <div className="explore  sections-img">
        <h2 style={{margin:'20px'}}>Explore</h2>
       <div className="container-cards">
              { imgs.map((img)=>{

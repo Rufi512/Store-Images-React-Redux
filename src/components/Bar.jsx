@@ -1,34 +1,50 @@
-import React from 'react'
+import React from "react";
+import {setScroll} from './SomethingFunctions'
+const Bar = () => {
+ 
+  function borderBar(e) {
+    const line = document.querySelector("#line");
+    const container = document.querySelector(".container-sections");
 
-const Bar = () =>{
+    line.style.left = e.offsetLeft + "px";
+    line.style.width = e.offsetWidth + "px";
+   
+    if (e.innerHTML === "Explore") {
+      container.style.transform = "translateX(0%)";
+       setScroll(0)
+    } else {
+      container.style.transform = "translateX(-100%)";
+       setScroll(1)
+    }
+  }
 
-function borderBar(e){
- const line = document.querySelector('#line')
- const explore = document.querySelector('.explore')
- const favorites = document.querySelector('.favorites')
- line.style.left = e.offsetLeft + 'px'
- line.style.width = e.offsetWidth + 'px'
- if(e.innerHTML === "Explore"){
-     explore.style.transform = 'translateX(0%)';
-     favorites.style.transform = 'translateX(100%)'
- }else{
-      explore.style.transform = 'translateX(-100%)';
-     favorites.style.transform = 'translateX(0%)'
- }
-}
-
-
-	return(
-		<div className="header">
-    <h1>Pic Store</h1>
-    <div><nav>
-    	<ul>
-    		<li onClick={e=>{borderBar(e.target)}}>Explore</li>
-    		<li onClick={e=>{borderBar(e.target)}}>Favorites</li>
+  return (
+    <div className="header">
+      <h1>Pic Store</h1>
+      <div>
+        <nav>
+          <ul>
+            <li
+              onClick={(e) => {
+                borderBar(e.target);
+              }}
+            >
+              Explore
+            </li>
+            <li
+              onClick={(e) => {
+                borderBar(e.target);
+              }}
+            >
+              Favorites
+            </li>
             <div id="line"></div>
-    	</ul>
-    </nav></div>
-    </div>)
-}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  );
+};
 
-export default Bar
+export default Bar;
+

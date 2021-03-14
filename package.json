@@ -2,7 +2,7 @@
   "name": "store-images",
   "version": "0.1.0",
   "private": true,
-  "homepage":"http://rufi512.github.io/Store-Images-React-Redux",
+  "homepage": "http://rufi512.github.io/Store-Images-React-Redux",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -11,12 +11,12 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^4.0.3",
     "redux": "^4.0.5"
   },
   "scripts": {
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

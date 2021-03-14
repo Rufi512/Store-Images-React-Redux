@@ -1,21 +1,23 @@
 import React from 'react'
 import {connect} from 'react-redux'
-//You have nothing added to favorites
+import {setScroll} from './SomethingFunctions'
+
+//if nothing exist
 const Favorites = ({favorites,remove}) =>{
   if(favorites[0] === undefined){
     return(
-      <div className="favorites">
+      <div className="favorites sections-img">
       <h2 style={{margin:'20px'}}>Favorites</h2>
-      <div className="msj">
-      <p>You have nothing added to favorites</p>
-      </div>
+ 
+      <p style={{margin: '215px auto',width: 'auto'}}>You have nothing added to favorites</p>
+    
       </div>
       )
   }
   
   
  return (
-  <div className="favorites">
+  <div className="favorites sections-img">
         <h2 style={{margin:'20px'}}>Favorites</h2>
 
         <div className="container-cards">
@@ -28,7 +30,7 @@ const Favorites = ({favorites,remove}) =>{
                           <img src={img.url} alt={img.name}/>
                     </div>  
                     <div className="card-footer">
-                      <button type="button" onClick={e => remove(img)}>Remove</button>
+                      <button type="button" onClick={(e) => {remove(img);setScroll(1)}}>Remove</button>
                     </div>
                </div>)
 
